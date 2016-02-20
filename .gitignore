@@ -1,2 +1,4 @@
 .idea/
-
+podcasts
+__pycache__/
+podcast.log
