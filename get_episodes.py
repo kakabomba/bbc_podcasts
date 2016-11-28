@@ -6,6 +6,14 @@ import math
 from datetime import datetime
 from subprocess import call
 import glob
+import download
+from bs4 import BeautifulSoup
+import os
+import re
+import math
+from datetime import datetime
+from subprocess import call
+import glob
 
 
 # import logging
@@ -102,13 +110,12 @@ class Eposide():
             file = open(coverfilename, 'xb')
             file.write(file_content)
             file.close()
-            shcommand = ["eyeD3", "--quiet", "--force-update", "--remove-all-images", mp3filename]
+            shcommand = ["eyeD3", "--remove-images", mp3filename]
             print(" ".join(shcommand))
             logfile.write(" ".join(shcommand))
 
             call(shcommand)
-            shcommand = ["eyeD3", "--quiet", "--force-update", "--add-image",
-                  '{}:FRONT_COVER:{}'.format(coverfilename, prefix), mp3filename]
+            shcommand = ["eyeD3", "--add-image", '{}:ILLUSTRATION:{}'.format(coverfilename, prefix), mp3filename]
             print(" ".join(shcommand))
             logfile.write(" ".join(shcommand))
             call(shcommand)

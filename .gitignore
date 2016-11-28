@@ -2,3 +2,5 @@
 podcasts
 __pycache__/
 podcast.log
+.venv
+
