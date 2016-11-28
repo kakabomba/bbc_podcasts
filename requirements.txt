@@ -1,0 +1,5 @@
+bs4==0.0.1
+PySocks==1.5.7
+requests==2.12.1
+stem==1.5.2
+eyeD3==0.7.9
