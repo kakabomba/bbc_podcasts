@@ -123,7 +123,7 @@ def get_page(url, bin=False):
             print('page requested `%s`' % (url,))
             ret = get_page_via_tor(url)
             print('page given')
-            return ret if bin else ret.decode("utf-8")
+            return ret if bin else ret.decode("utf-8")  
         except Exception as e:
             print("Error `%s` getting url `%s`, trying `%s` of `%s`" % (e, url, trying, maxtry))
             trying += 1
